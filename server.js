@@ -43,6 +43,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Portfolio Page',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         error: '404 Bad Request'
